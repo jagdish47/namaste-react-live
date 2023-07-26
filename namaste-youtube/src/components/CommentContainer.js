@@ -18,27 +18,24 @@ const Comment = ({ data }) => {
   );
 };
 
-
 const commentList = ({ comments }) => {
-    return comments.map((comment, index) => (
-        <div>
-            <Comment key={index} data={comment}/>
-            <div className="pl-5 border border-l-black">
-                <Comment key={index} data={comment}/>
-                <Comment key={index} data={comment}/>
-                <Comment key={index} data={comment}/>
-            </div>
-        </div>
-    ));
-}
-
-
+  return comments.map((comment, index) => (
+    <div>
+      <Comment key={index} data={comment} />
+      <div className="pl-5 border border-l-black">
+        <Comment key={index} data={comment} />
+        <Comment key={index} data={comment} />
+        <Comment key={index} data={comment} />
+      </div>
+    </div>
+  ));
+};
 
 const CommentContainer = () => {
   return (
     <div className="m-5 p-2">
       <h1 className="text-2xl font-bold">Comments : </h1>
-      <Comment data={} />
+      {/* <Comment data={} /> */}
     </div>
   );
 };
