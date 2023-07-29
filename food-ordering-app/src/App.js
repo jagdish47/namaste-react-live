@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import RestaurantCart from "./components/RestaurantCart";
+import FilterRestaurant from "./components/FilterRestaurant";
 import { restaurants } from "./utils/mockData";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <div>
       <Header />
+      {/* <FilterRestaurant /> */}
       <RestaurantCart restaurants={restaurants} />
     </div>
   );
