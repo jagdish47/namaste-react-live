@@ -1,23 +1,44 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CDN_IMG } from "../utils/constant";
 
-const RestaurantCart = ({ restaurants }) => {
-  // console.log("Restaurant Cart is : ", restaurants);
+const RestaurantCart = () => {
+  let [restaurant, setRestaurant] = useState([]);
 
-  const [restaurant, setRestaurant] = useState(restaurants);
-  let filteredProduct = [];
-  console.log(restaurant);
+  //useEffect
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    const res = await fetch(
+      "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=12.956924&lng=77.701127&carousel=true&third_party_vendor=1"
+    );
+    const json = await res.json();
+
+    setRestaurant(
+      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+    );
+  }
 
   function topRatedRestaurant() {
-    filteredProduct = restaurant.filter((ele) => {
+    const filteredRes = restaurant.filter((ele) => {
       return ele.info.avgRating > 4;
     });
 
-    setRestaurant(filteredProduct);
+    setRestaurant(filteredRes);
   }
 
   function filterAll() {
-    setRestaurant(restaurants);
+    fetchData();
+  }
+
+  function mediumRestaurant() {
+    filteredRes = restaurant.filter((ele) => {
+      return ele.info.avgRating <= 3.9;
+    });
+
+    setRestaurant(filteredRes);
   }
 
   return (
@@ -35,7 +56,10 @@ const RestaurantCart = ({ restaurants }) => {
         >
           Top Rated Restaurant
         </button>
-        <button className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
+        <button
+          onClick={mediumRestaurant}
+          className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+        >
           Medium Rated Restaurant
         </button>
       </div>
