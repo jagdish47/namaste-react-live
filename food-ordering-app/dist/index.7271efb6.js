@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"cIuSe":[function(require,module,exports) {
+})({"hcwwj":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "f8a609f57826abd7";
+module.bundle.HMR_BUNDLE_ID = "7fb4cd117271efb6";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -2934,11 +2934,11 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"2Ew96":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c1db = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"2kQhy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f00f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c1db.prelude(module);
+$parcel$ReactRefreshHelpers$f00f.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -2947,218 +2947,48 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-var _header = require("./Header");
+var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
-var _cart = require("./Cart");
+var _cart = require("./components/Cart");
 var _cartDefault = parcelHelpers.interopDefault(_cart);
-const data = [
-    {
-        info: {
-            id: "47603",
-            name: "Truffles",
-            cloudinaryImageId: "cd832b6167eb9f88aeb1ccdebf38d942",
-            locality: "Green Glen Layout",
-            areaName: "Bellandur",
-            costForTwo: "₹450 for two",
-            cuisines: [
-                "American",
-                "Beverages",
-                "Continental",
-                "Desserts",
-                "Italian"
-            ],
-            avgRating: 4.4,
-            feeDetails: {
-                restaurantId: "47603",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 7600
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 7600
-            },
-            parentId: "218065",
-            avgRatingString: "4.4",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 42,
-                lastMileTravel: 6.3,
-                serviceability: "SERVICEABLE",
-                slaString: "42 mins",
-                lastMileTravelString: "6.3 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 00:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            aggregatedDiscountInfoV2: {},
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/truffles-green-glen-layout-bellandur-bangalore-47603",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "47439",
-            name: "Leon's - Burgers & Wings (Leon Grill)",
-            cloudinaryImageId: "uxtqnke0nupbu1i1fmvf",
-            locality: "Outer Ring Road",
-            areaName: "Marathahalli",
-            costForTwo: "₹400 for two",
-            cuisines: [
-                "American",
-                "Snacks",
-                "Turkish",
-                "Portuguese",
-                "Continental"
-            ],
-            avgRating: 4.1,
-            feeDetails: {
-                restaurantId: "47439",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "371281",
-            avgRatingString: "4.1",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 24,
-                lastMileTravel: 1.7,
-                serviceability: "SERVICEABLE",
-                slaString: "24 mins",
-                lastMileTravelString: "1.7 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 04:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹249",
-                discountTag: "FLAT DEAL"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/leons-burgers-and-wings-leon-grill-outer-ring-road-marathahalli-bangalore-47439",
-            type: "WEBLINK"
-        }
-    }
-];
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 168,
+                fileName: "src/App.js",
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartDefault.default), {
                 data: data
             }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 169,
+                fileName: "src/App.js",
+                lineNumber: 10,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
-        fileName: "App.js",
-        lineNumber: 167,
+        fileName: "src/App.js",
+        lineNumber: 8,
         columnNumber: 5
     }, this);
 }
 _c = App;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
-    fileName: "App.js",
-    lineNumber: 175,
+    fileName: "src/App.js",
+    lineNumber: 16,
     columnNumber: 13
 }, undefined));
 var _c;
 $RefreshReg$(_c, "App");
 
-  $parcel$ReactRefreshHelpers$c1db.postlude(module);
+  $parcel$ReactRefreshHelpers$f00f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./Header":"8bVnH","./Cart":"1iaGP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Header":"hsJbF","./components/Cart":"h8J3U"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27343,103 +27173,7 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"8bVnH":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7785 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7785.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function Header() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        style: {
-            display: "flex",
-            border: "2px solid black",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "800px"
-        },
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    style: {
-                        height: "150px",
-                        width: "150px"
-                    },
-                    src: "https://img.freepik.com/premium-vector/good-food-logo-design_79169-10.jpg?w=2000",
-                    alt: "logo-here"
-                }, void 0, false, {
-                    fileName: "Header.js",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "Header.js",
-                lineNumber: 12,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                style: {
-                    display: "flex",
-                    listStyle: "none",
-                    gap: "30px"
-                },
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "Home"
-                    }, void 0, false, {
-                        fileName: "Header.js",
-                        lineNumber: 20,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "About Us"
-                    }, void 0, false, {
-                        fileName: "Header.js",
-                        lineNumber: 21,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "Contact Us"
-                    }, void 0, false, {
-                        fileName: "Header.js",
-                        lineNumber: 22,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "Cart"
-                    }, void 0, false, {
-                        fileName: "Header.js",
-                        lineNumber: 23,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "Header.js",
-                lineNumber: 19,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "Header.js",
-        lineNumber: 3,
-        columnNumber: 5
-    }, this);
-}
-_c = Header;
-exports.default = Header;
-var _c;
-$RefreshReg$(_c, "Header");
-
-  $parcel$ReactRefreshHelpers$7785.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
+},{}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27607,11 +27341,107 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"1iaGP":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$cfb4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"7422ead32dcc1e6b":"786KC"}],"hsJbF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bfed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$cfb4.prelude(module);
+$parcel$ReactRefreshHelpers$bfed.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Header() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        style: {
+            display: "flex",
+            border: "2px solid black",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "800px"
+        },
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    style: {
+                        height: "150px",
+                        width: "150px"
+                    },
+                    src: "https://img.freepik.com/premium-vector/good-food-logo-design_79169-10.jpg?w=2000",
+                    alt: "logo-here"
+                }, void 0, false, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                style: {
+                    display: "flex",
+                    listStyle: "none",
+                    gap: "30px"
+                },
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: "Home"
+                    }, void 0, false, {
+                        fileName: "src/components/Header.js",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: "About Us"
+                    }, void 0, false, {
+                        fileName: "src/components/Header.js",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: "Contact Us"
+                    }, void 0, false, {
+                        fileName: "src/components/Header.js",
+                        lineNumber: 22,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: "Cart"
+                    }, void 0, false, {
+                        fileName: "src/components/Header.js",
+                        lineNumber: 23,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Header.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Header.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, this);
+}
+_c = Header;
+exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$bfed.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"h8J3U":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ad24 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ad24.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27625,12 +27455,12 @@ const Cart = ({ data })=>{
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
             children: data[0].info.areaName
         }, void 0, false, {
-            fileName: "Cart.js",
+            fileName: "src/components/Cart.js",
             lineNumber: 8,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
-        fileName: "Cart.js",
+        fileName: "src/components/Cart.js",
         lineNumber: 7,
         columnNumber: 5
     }, undefined);
@@ -27640,11 +27470,11 @@ exports.default = Cart;
 var _c;
 $RefreshReg$(_c, "Cart");
 
-  $parcel$ReactRefreshHelpers$cfb4.postlude(module);
+  $parcel$ReactRefreshHelpers$ad24.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["cIuSe","1xC6H","2Ew96"], "2Ew96", "parcelRequire5906")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["hcwwj","1xC6H","2kQhy"], "2kQhy", "parcelRequire5906")
 
-//# sourceMappingURL=index.7826abd7.js.map
+//# sourceMappingURL=index.7271efb6.js.map
