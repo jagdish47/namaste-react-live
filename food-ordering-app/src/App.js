@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
-import Cart from "./components/Cart";
+import RestaurantCart from "./components/RestaurantCart";
+import { restaurants } from "./utils/mockData";
 
 function App() {
+  console.log(restaurants);
   return (
     <div>
       <Header />
-      <Cart data={data} />
+      <RestaurantCart restaurants={restaurants} />
     </div>
   );
 }
