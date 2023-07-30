@@ -1,3 +1,5 @@
+import Login from "./Login";
+
 function Header() {
   return (
     <div
@@ -21,6 +23,7 @@ function Header() {
         <li>About Us</li>
         <li>Contact Us</li>
         <li>Cart</li>
+        <Login />
       </ul>
     </div>
   );
