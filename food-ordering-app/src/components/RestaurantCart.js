@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { CDN_IMG } from "../utils/constant";
 import Loader from "./Loader";
+import Search from "./Search";
 
 const RestaurantCart = () => {
   let [restaurant, setRestaurant] = useState([]);
@@ -44,7 +45,7 @@ const RestaurantCart = () => {
 
   return (
     <>
-      <div className="ml-36 mb-3">
+      <div className="ml-36 mb-3 flex">
         <button
           onClick={filterAll}
           className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
@@ -63,6 +64,9 @@ const RestaurantCart = () => {
         >
           Medium Rated Restaurant
         </button>
+
+        {/* Search Component here */}
+        <Search setRestaurant={setRestaurant} />
       </div>
 
       {restaurant.length > 0 ? (
