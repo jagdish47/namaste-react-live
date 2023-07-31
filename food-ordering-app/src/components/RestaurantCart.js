@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { CDN_IMG } from "../utils/constant";
 import Loader from "./Loader";
-import Search from "./Search";
 
 const RestaurantCart = () => {
   let [restaurant, setRestaurant] = useState([]);
+  let [filterRestaurant, setFilterRestaurant] = useState([]);
+  const [text, setText] = useState("");
 
   //useEffect
 
@@ -19,6 +20,10 @@ const RestaurantCart = () => {
     const json = await res.json();
 
     setRestaurant(
+      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+    );
+
+    setFilterRestaurant(
       json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
     );
   }
@@ -43,6 +48,8 @@ const RestaurantCart = () => {
     setRestaurant(filteredRes);
   }
 
+  console.log(text);
+
   return (
     <>
       <div className="ml-36 mb-3 flex">
@@ -65,14 +72,32 @@ const RestaurantCart = () => {
           Medium Rated Restaurant
         </button>
 
-        {/* Search Component here */}
-        <Search setRestaurant={setRestaurant} />
+        {/* Search Functionality */}
+        <div>
+          <input
+            type={text}
+            placeholder="Search Your Food"
+            className="w-[500px] px-4 py-2 ml-5 rounded-md bg-gray-100 focus:outline-none"
+            onChange={(e) => setText(e.target.value)}
+          />
+          <button
+            className="bg-gray-200 hover:bg-gray-600 text-white font-bold py-1 px-4 rounded ml-5 text-black"
+            onClick={() => {
+              filterRestaurant = restaurant.filter((ele) => {
+                ele.info.name.toLowerCase().includes(text.toLowerCase());
+              });
+              setFilterRestaurant(filterRestaurant);
+            }}
+          >
+            Search
+          </button>
+        </div>
       </div>
 
-      {restaurant.length > 0 ? (
+      {filterRestaurant.length > 0 ? (
         <div className="flex w-full justify-center">
           <div className="w-[1600px] grid grid-cols-5 gap-5 justify-center items-center">
-            {restaurant.map((ele) => (
+            {filterRestaurant.map((ele) => (
               <div className="border-2 h-96 w-72 ">
                 <img
                   className="h-72 w-full rounded-lg"
