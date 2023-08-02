@@ -2957,6 +2957,8 @@ var _contact = require("./components/Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
 var _error = require("./components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
+var _restaurantMenuPage = require("./components/RestaurantMenuPage");
+var _restaurantMenuPageDefault = parcelHelpers.interopDefault(_restaurantMenuPage);
 var _mockData = require("./utils/mockData");
 var _reactRouterDom = require("react-router-dom");
 function App() {
@@ -2965,20 +2967,25 @@ function App() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 15,
+                lineNumber: 16,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCartDefault.default), {
                 restaurants: (0, _mockData.restaurants)
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 17,
+                lineNumber: 18,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 14,
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
@@ -2988,29 +2995,39 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 23,
-            columnNumber: 25
+            lineNumber: 26,
+            columnNumber: 14
         }, undefined),
+        children: [
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 29,
+                    columnNumber: 34
+                }, undefined)
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 30,
+                    columnNumber: 36
+                }, undefined)
+            },
+            {
+                path: "/restaurants/:resId",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuPageDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 31,
+                    columnNumber: 47
+                }, undefined)
+            }
+        ],
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 23,
-            columnNumber: 48
-        }, undefined)
-    },
-    {
-        path: "/about",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 24,
-            columnNumber: 30
-        }, undefined)
-    },
-    {
-        path: "/contact",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 25,
-            columnNumber: 32
+            lineNumber: 33,
+            columnNumber: 19
         }, undefined)
     }
 ]);
@@ -3019,7 +3036,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 29,
+    lineNumber: 38,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3030,7 +3047,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/About":"9R1Eu","./components/RestaurantCart":"7w5cb","./utils/mockData":"iOpE9","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Contact":"cgAOG","./components/Error":"kvula"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/About":"9R1Eu","./components/RestaurantCart":"7w5cb","./components/Contact":"cgAOG","./components/Error":"kvula","./utils/mockData":"iOpE9","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/RestaurantMenuPage":"gUQ0D"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27225,6 +27242,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
 var _login = require("./Login");
 var _loginDefault = parcelHelpers.interopDefault(_login);
 function Header() {
@@ -27247,12 +27265,12 @@ function Header() {
                     alt: "logo-here"
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 15,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 14,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -27263,48 +27281,72 @@ function Header() {
                 },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "Home"
-                    }, void 0, false, {
-                        fileName: "src/components/Header.js",
-                        lineNumber: 22,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "About Us"
-                    }, void 0, false, {
+                        children: [
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/",
+                                children: " Home "
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 23,
+                                columnNumber: 14
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/Header.js",
                         lineNumber: 23,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "Contact Us"
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/about",
+                            children: "About Us"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 24,
+                            columnNumber: 13
+                        }, this)
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
                         lineNumber: 24,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "Cart"
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/contact",
+                            children: "Contact Us"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 25,
+                            columnNumber: 13
+                        }, this)
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
                         lineNumber: 25,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginDefault.default), {}, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: "Cart"
+                    }, void 0, false, {
                         fileName: "src/components/Header.js",
                         lineNumber: 26,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginDefault.default), {}, void 0, false, {
+                        fileName: "src/components/Header.js",
+                        lineNumber: 27,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Header.js",
-                lineNumber: 21,
+                lineNumber: 22,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 5,
+        lineNumber: 6,
         columnNumber: 5
     }, this);
 }
@@ -27318,2297 +27360,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Login":"hsmcH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hsmcH":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5afe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5afe.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _s = $RefreshSig$();
-const Login = ()=>{
-    _s();
-    const [log, setLog] = (0, _react.useState)("Logout");
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-            onClick: ()=>{
-                log == "Login" ? setLog("Logout") : setLog("Login");
-            },
-            className: "bg-gray-400 hover:bg-gray-450 text-white font-semibold py-2 px-4 rounded",
-            children: log
-        }, void 0, false, {
-            fileName: "src/components/Login.js",
-            lineNumber: 8,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/Login.js",
-        lineNumber: 7,
-        columnNumber: 5
-    }, undefined);
-};
-_s(Login, "/J9lMQh/LqgFdjEshhdBm1uMDv8=");
-_c = Login;
-exports.default = Login;
-var _c;
-$RefreshReg$(_c, "Login");
-
-  $parcel$ReactRefreshHelpers$5afe.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("7422ead32dcc1e6b");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30);
-// Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports;
-                // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
-                // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-}
-// When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        var typeID = id + " %exports% " + key;
-        Refresh.register(exportValue, typeID);
-    }
-}
-
-},{"7422ead32dcc1e6b":"786KC"}],"9R1Eu":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5b98.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "About us"
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 4,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "We are a big team to helping to everyone to grow."
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 5,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/About.js",
-        lineNumber: 3,
-        columnNumber: 5
-    }, undefined);
-};
-_c = About;
-exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
-
-  $parcel$ReactRefreshHelpers$5b98.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7w5cb":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$d74a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d74a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _constant = require("../utils/constant");
-var _loader = require("./Loader");
-var _loaderDefault = parcelHelpers.interopDefault(_loader);
-var _s = $RefreshSig$();
-const RestaurantCart = ()=>{
-    _s();
-    let [restaurant, setRestaurant] = (0, _react.useState)([]);
-    let [filterRestaurant, setFilterRestaurant] = (0, _react.useState)([]);
-    const [text, setText] = (0, _react.useState)("");
-    //useEffect
-    (0, _react.useEffect)(()=>{
-        fetchData();
-    }, []);
-    async function fetchData() {
-        const res = await fetch("https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=12.956924&lng=77.701127&carousel=true&third_party_vendor=1");
-        const json = await res.json();
-        setRestaurant(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
-        setFilterRestaurant(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
-    }
-    function topRatedRestaurant() {
-        const filteredRes1 = restaurant.filter((ele)=>{
-            return ele.info.avgRating > 4;
-        });
-        setRestaurant(filteredRes1);
-    }
-    function filterAll() {
-        fetchData();
-    }
-    function mediumRestaurant() {
-        filteredRes = restaurant.filter((ele)=>{
-            return ele.info.avgRating <= 3.9;
-        });
-        setRestaurant(filteredRes);
-    }
-    console.log(text);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "ml-36 mb-3 flex",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: filterAll,
-                        className: "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded",
-                        children: "All"
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantCart.js",
-                        lineNumber: 56,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: topRatedRestaurant,
-                        className: "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mx-5",
-                        children: "Top Rated Restaurant"
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantCart.js",
-                        lineNumber: 62,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: mediumRestaurant,
-                        className: "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded",
-                        children: "Medium Rated Restaurant"
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantCart.js",
-                        lineNumber: 68,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                type: text,
-                                placeholder: "Search Your Food",
-                                className: "w-[500px] px-4 py-2 ml-5 rounded-md bg-gray-100 focus:outline-none",
-                                onChange: (e)=>setText(e.target.value)
-                            }, void 0, false, {
-                                fileName: "src/components/RestaurantCart.js",
-                                lineNumber: 77,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "bg-gray-200 hover:bg-gray-600 text-white font-bold py-1 px-4 rounded ml-5 text-black",
-                                onClick: ()=>{
-                                    filterRestaurant = restaurant.filter((ele)=>{
-                                        ele.info.name.toLowerCase().includes(text.toLowerCase());
-                                    });
-                                    setFilterRestaurant(filterRestaurant);
-                                },
-                                children: "Search"
-                            }, void 0, false, {
-                                fileName: "src/components/RestaurantCart.js",
-                                lineNumber: 83,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/RestaurantCart.js",
-                        lineNumber: 76,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RestaurantCart.js",
-                lineNumber: 55,
-                columnNumber: 7
-            }, undefined),
-            filterRestaurant.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex w-full justify-center",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "w-[1600px] grid grid-cols-5 gap-5 justify-center items-center",
-                    children: filterRestaurant.map((ele)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "border-2 h-96 w-72 ",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: "h-72 w-full rounded-lg",
-                                    src: `${(0, _constant.CDN_IMG)}${ele?.info?.cloudinaryImageId}`,
-                                    alt: ele.info.name
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCart.js",
-                                    lineNumber: 102,
-                                    columnNumber: 17
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                    className: "text-lg font-bold",
-                                    children: ele.info.name.split(",", 3)
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCart.js",
-                                    lineNumber: 107,
-                                    columnNumber: 17
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "flex items-center",
-                                    children: [
-                                        " ",
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                            children: [
-                                                ele.info.avgRating,
-                                                " ",
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                    children: "*"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/RestaurantCart.js",
-                                                    lineNumber: 114,
-                                                    columnNumber: 42
-                                                }, undefined),
-                                                " "
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/RestaurantCart.js",
-                                            lineNumber: 113,
-                                            columnNumber: 19
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/RestaurantCart.js",
-                                    lineNumber: 110,
-                                    columnNumber: 17
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    children: ele.info.cuisines.join(" ")
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCart.js",
-                                    lineNumber: 118,
-                                    columnNumber: 17
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/RestaurantCart.js",
-                            lineNumber: 101,
-                            columnNumber: 15
-                        }, undefined))
-                }, void 0, false, {
-                    fileName: "src/components/RestaurantCart.js",
-                    lineNumber: 99,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCart.js",
-                lineNumber: 98,
-                columnNumber: 9
-            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loaderDefault.default), {}, void 0, false, {
-                fileName: "src/components/RestaurantCart.js",
-                lineNumber: 124,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(RestaurantCart, "05L55f7VVpUhE2S594G2SQIlUeA=");
-_c = RestaurantCart;
-exports.default = RestaurantCart;
-var _c;
-$RefreshReg$(_c, "RestaurantCart");
-
-  $parcel$ReactRefreshHelpers$d74a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/constant":"6mqGZ","./Loader":"1ptgS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6mqGZ":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "CDN_IMG", ()=>CDN_IMG);
-const CDN_IMG = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1ptgS":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9122 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9122.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Loader = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex w-full justify-center",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "w-[1600px] grid grid-cols-5 gap-5 justify-center items-center",
-            children: Array.from({
-                length: 10
-            }).map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "h-96 w-72 bg-gray-300 rounded-md mx-2 "
-                }, void 0, false, {
-                    fileName: "src/components/Loader.js",
-                    lineNumber: 6,
-                    columnNumber: 11
-                }, undefined))
-        }, void 0, false, {
-            fileName: "src/components/Loader.js",
-            lineNumber: 4,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/Loader.js",
-        lineNumber: 3,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Loader;
-exports.default = Loader;
-var _c;
-$RefreshReg$(_c, "Loader");
-
-  $parcel$ReactRefreshHelpers$9122.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iOpE9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "restaurants", ()=>restaurants);
-const restaurants = [
-    {
-        info: {
-            id: "47603",
-            name: "Truffles",
-            cloudinaryImageId: "cd832b6167eb9f88aeb1ccdebf38d942",
-            locality: "Green Glen Layout",
-            areaName: "Bellandur",
-            costForTwo: "₹450 for two",
-            cuisines: [
-                "American",
-                "Beverages",
-                "Continental",
-                "Desserts",
-                "Italian"
-            ],
-            avgRating: 4.4,
-            feeDetails: {
-                restaurantId: "47603",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 7600
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 7600
-            },
-            parentId: "218065",
-            avgRatingString: "4.4",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 42,
-                lastMileTravel: 6.3,
-                serviceability: "SERVICEABLE",
-                slaString: "42 mins",
-                lastMileTravelString: "6.3 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 00:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            aggregatedDiscountInfoV2: {},
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/truffles-green-glen-layout-bellandur-bangalore-47603",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "47439",
-            name: "Leon's - Burgers & Wings (Leon Grill)",
-            cloudinaryImageId: "uxtqnke0nupbu1i1fmvf",
-            locality: "Outer Ring Road",
-            areaName: "Marathahalli",
-            costForTwo: "₹400 for two",
-            cuisines: [
-                "American",
-                "Snacks",
-                "Turkish",
-                "Portuguese",
-                "Continental"
-            ],
-            avgRating: 4.1,
-            feeDetails: {
-                restaurantId: "47439",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "371281",
-            avgRatingString: "4.1",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 24,
-                lastMileTravel: 1.7,
-                serviceability: "SERVICEABLE",
-                slaString: "24 mins",
-                lastMileTravelString: "1.7 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 04:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹249",
-                discountTag: "FLAT DEAL"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/leons-burgers-and-wings-leon-grill-outer-ring-road-marathahalli-bangalore-47439",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "18976",
-            name: "Nandhana Palace",
-            cloudinaryImageId: "195876a3181ef63f76e45e3a7b49b585",
-            locality: "Munnekollal",
-            areaName: "Marathahalli",
-            costForTwo: "₹500 for two",
-            cuisines: [
-                "Biryani",
-                "Andhra",
-                "South Indian",
-                "North Indian"
-            ],
-            avgRating: 4.1,
-            feeDetails: {
-                restaurantId: "18976",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 4100
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 4100
-            },
-            parentId: "2120",
-            avgRatingString: "4.1",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 30,
-                lastMileTravel: 3,
-                serviceability: "SERVICEABLE",
-                slaString: "30 mins",
-                lastMileTravelString: "3.0 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 02:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹249",
-                discountTag: "FLAT DEAL"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/nandhana-palace-munnekollal-marathahalli-bangalore-18976",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "79472",
-            name: "Domino's Pizza",
-            cloudinaryImageId: "nkxgwtukusj6dnfbn8lr",
-            locality: "Munnekolalu",
-            areaName: "Marathahalli",
-            costForTwo: "₹400 for two",
-            cuisines: [
-                "Pizzas",
-                "Italian",
-                "Pastas",
-                "Desserts"
-            ],
-            avgRating: 4.3,
-            feeDetails: {
-                restaurantId: "79472",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "2456",
-            avgRatingString: "4.3",
-            totalRatingsString: "5K+",
-            sla: {
-                deliveryTime: 35,
-                serviceability: "SERVICEABLE",
-                slaString: "35 mins",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 02:59:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "₹150 OFF",
-                subHeader: "ABOVE ₹699",
-                discountTag: "FLAT DEAL"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/dominos-pizza-munnekolalu-marathahalli-bangalore-79472",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "390620",
-            name: "The Belgian Waffle Co.",
-            cloudinaryImageId: "q8adcck8ioox7yww3ibe",
-            locality: "Tulasi Theater Road",
-            areaName: "Marathahalli",
-            costForTwo: "₹200 for two",
-            cuisines: [
-                "Waffle",
-                "Desserts",
-                "Ice Cream"
-            ],
-            avgRating: 4.3,
-            veg: true,
-            feeDetails: {
-                restaurantId: "390620",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "2233",
-            avgRatingString: "4.3",
-            totalRatingsString: "1K+",
-            sla: {
-                deliveryTime: 31,
-                lastMileTravel: 0.5,
-                serviceability: "SERVICEABLE",
-                slaString: "31 mins",
-                lastMileTravelString: "0.5 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 02:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "20% OFF",
-                subHeader: "UPTO ₹50"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/the-belgian-waffle-co-tulasi-theater-road-marathahalli-bangalore-390620",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "23688",
-            name: "McDonald's",
-            cloudinaryImageId: "ee5f8e06b300efc07c9fe3f4df40dfc4",
-            locality: "Marathahalli",
-            areaName: "Brookefield",
-            costForTwo: "₹400 for two",
-            cuisines: [
-                "Burgers",
-                "Beverages",
-                "Cafe",
-                "Desserts"
-            ],
-            avgRating: 4.1,
-            feeDetails: {
-                restaurantId: "23688",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 4100
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 4100
-            },
-            parentId: "630",
-            avgRatingString: "4.1",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 26,
-                lastMileTravel: 3,
-                serviceability: "SERVICEABLE",
-                slaString: "26 mins",
-                lastMileTravelString: "3.0 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 03:45:00",
-                opened: true
-            },
-            badges: {
-                textExtendedBadges: [
-                    {
-                        iconId: "guiltfree/GF_Logo_android_3x",
-                        shortDescription: "options available",
-                        fontColor: "#7E808C"
-                    }
-                ]
-            },
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {
-                        badgeObject: [
-                            {
-                                attributes: {
-                                    description: "",
-                                    fontColor: "#7E808C",
-                                    iconId: "guiltfree/GF_Logo_android_3x",
-                                    shortDescription: "options available"
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "10% OFF",
-                subHeader: "ABOVE ₹999",
-                discountTag: "FLAT DEAL"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/mcdonalds-marathahalli-brookefield-bangalore-23688",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "10866",
-            name: "Pizza Hut",
-            cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
-            locality: "Munnekolalu Village",
-            areaName: "Marathahalli",
-            costForTwo: "₹350 for two",
-            cuisines: [
-                "Pizzas"
-            ],
-            avgRating: 3.7,
-            feeDetails: {
-                restaurantId: "10866",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "721",
-            avgRatingString: "3.7",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 22,
-                lastMileTravel: 1.9,
-                serviceability: "SERVICEABLE",
-                slaString: "22 mins",
-                lastMileTravelString: "1.9 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 04:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "50% OFF",
-                subHeader: "UPTO ₹100"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/pizza-hut-munnekolalu-village-marathahalli-bangalore-10866",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "43910",
-            name: "KFC",
-            cloudinaryImageId: "56c9ab92bd79745fd152a30fa2525426",
-            locality: "Kbr Mall",
-            areaName: "Marathahalli",
-            costForTwo: "₹400 for two",
-            cuisines: [
-                "Burgers",
-                "Biryani",
-                "American",
-                "Snacks",
-                "Fast Food"
-            ],
-            avgRating: 3.9,
-            feeDetails: {
-                restaurantId: "43910",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 4100
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 4100
-            },
-            parentId: "547",
-            avgRatingString: "3.9",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 25,
-                lastMileTravel: 3.5,
-                serviceability: "SERVICEABLE",
-                slaString: "25 mins",
-                lastMileTravelString: "3.5 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 01:59:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "40% OFF",
-                subHeader: "UPTO ₹80"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/kfc-kbr-mall-marathahalli-bangalore-43910",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "21668",
-            name: "Subway",
-            cloudinaryImageId: "1ace5fa65eff3e1223feb696c956b38b",
-            locality: "Kundanahalli",
-            areaName: "Marathahalli",
-            costForTwo: "₹350 for two",
-            cuisines: [
-                "Salads",
-                "Snacks",
-                "Desserts",
-                "Beverages"
-            ],
-            avgRating: 4.3,
-            feeDetails: {
-                restaurantId: "21668",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "2",
-            avgRatingString: "4.3",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 19,
-                lastMileTravel: 2,
-                serviceability: "SERVICEABLE",
-                slaString: "19 mins",
-                lastMileTravelString: "2.0 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-28 23:55:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "40% OFF",
-                subHeader: "UPTO ₹80"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/subway-kundanahalli-marathahalli-bangalore-21668",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "1187",
-            name: "Baskin Robbins - Ice Cream Desserts",
-            cloudinaryImageId: "85ccae4e3576f9330af102c46ca85395",
-            locality: "Anand Nagar",
-            areaName: "Marathahalli",
-            costForTwo: "₹250 for two",
-            cuisines: [
-                "Desserts",
-                "Ice Cream"
-            ],
-            avgRating: 4.4,
-            veg: true,
-            feeDetails: {
-                restaurantId: "1187",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "5588",
-            avgRatingString: "4.4",
-            totalRatingsString: "5K+",
-            sla: {
-                deliveryTime: 19,
-                lastMileTravel: 2.5,
-                serviceability: "SERVICEABLE",
-                slaString: "19 mins",
-                lastMileTravelString: "2.5 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 05:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "D",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "30% OFF",
-                subHeader: "UPTO ₹75"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/baskin-robbins-ice-cream-desserts-anand-nagar-marathahalli-bangalore-1187",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "457821",
-            name: "Istah - The Mediterranean Way",
-            cloudinaryImageId: "67d4a416bf932f850b0a15ad33aae762",
-            locality: "Munnekolala",
-            areaName: "Marathahalli",
-            costForTwo: "₹250 for two",
-            cuisines: [
-                "Mediterranean",
-                "Snacks",
-                "Biryani",
-                "Grill",
-                "Kebabs",
-                "Arabian",
-                "Lebanese",
-                "Beverages",
-                "Desserts",
-                "Italian",
-                "Turkish"
-            ],
-            avgRating: 4.3,
-            feeDetails: {
-                restaurantId: "457821",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "3518",
-            avgRatingString: "4.3",
-            totalRatingsString: "5K+",
-            sla: {
-                deliveryTime: 18,
-                lastMileTravel: 1.3,
-                serviceability: "SERVICEABLE",
-                slaString: "18 mins",
-                lastMileTravelString: "1.3 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 02:00:00",
-                opened: true
-            },
-            badges: {
-                textExtendedBadges: [
-                    {
-                        iconId: "guiltfree/GF_Logo_android_3x",
-                        shortDescription: "options available",
-                        fontColor: "#7E808C"
-                    }
-                ]
-            },
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {
-                        badgeObject: [
-                            {
-                                attributes: {
-                                    description: "",
-                                    fontColor: "#7E808C",
-                                    iconId: "guiltfree/GF_Logo_android_3x",
-                                    shortDescription: "options available"
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "60% OFF",
-                subHeader: "UPTO ₹100"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/istah-the-mediterranean-way-munnekolala-marathahalli-bangalore-457821",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "249717",
-            name: "The Good Bowl",
-            cloudinaryImageId: "j8wxjf8lrtit0s94bxyo",
-            locality: "Tulasi theater",
-            areaName: "Marathahalli",
-            costForTwo: "₹400 for two",
-            cuisines: [
-                "Biryani",
-                "North Indian",
-                "Pastas",
-                "Punjabi",
-                "Desserts",
-                "Beverages"
-            ],
-            avgRating: 3.9,
-            feeDetails: {
-                restaurantId: "249717",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "7918",
-            avgRatingString: "3.9",
-            totalRatingsString: "100+",
-            sla: {
-                deliveryTime: 21,
-                lastMileTravel: 0.5,
-                serviceability: "SERVICEABLE",
-                slaString: "21 mins",
-                lastMileTravelString: "0.5 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 03:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "60% OFF",
-                subHeader: "UPTO ₹120"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/the-good-bowl-tulasi-theater-marathahalli-bangalore-249717",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "32474",
-            name: "Thalassery Restaurant",
-            cloudinaryImageId: "qdvgwbz1b1pcttf1tifj",
-            locality: "M S Reddy Layout",
-            areaName: "Marathahalli",
-            costForTwo: "₹300 for two",
-            cuisines: [
-                "South Indian",
-                "Biryani",
-                "Kerala",
-                "North Indian",
-                "Chinese"
-            ],
-            avgRating: 3.9,
-            feeDetails: {
-                restaurantId: "32474",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "14391",
-            avgRatingString: "3.9",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 18,
-                lastMileTravel: 0.2,
-                serviceability: "SERVICEABLE",
-                slaString: "18 mins",
-                lastMileTravelString: "0.2 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-28 23:25:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "15% OFF",
-                subHeader: "ABOVE ₹900",
-                discountTag: "FLAT DEAL"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/thalassery-restaurant-m-s-reddy-layout-marathahalli-bangalore-32474",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "271483",
-            name: "Burger King",
-            cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
-            locality: "VR Mall",
-            areaName: "Krishnarajapura",
-            costForTwo: "₹350 for two",
-            cuisines: [
-                "Burgers",
-                "American"
-            ],
-            avgRating: 4,
-            feeDetails: {
-                restaurantId: "271483",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 7600
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 7600
-            },
-            parentId: "166",
-            avgRatingString: "4.0",
-            totalRatingsString: "5K+",
-            sla: {
-                deliveryTime: 33,
-                lastMileTravel: 6.4,
-                serviceability: "SERVICEABLE",
-                slaString: "33 mins",
-                lastMileTravelString: "6.4 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 03:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "EVERY ITEM",
-                subHeader: "@ ₹129"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/burger-king-vr-mall-krishnarajapura-bangalore-271483",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "580936",
-            name: "EatFit",
-            cloudinaryImageId: "94d3bc5e6392fbaf50686cf8cfab10ef",
-            locality: "Devarabisanahalli",
-            areaName: "Bellandur",
-            costForTwo: "₹270 for two",
-            cuisines: [
-                "Chinese",
-                "Healthy Food",
-                "Tandoor",
-                "Pizzas",
-                "North Indian",
-                "Thalis",
-                "Biryani"
-            ],
-            avgRating: 4,
-            feeDetails: {
-                restaurantId: "580936",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 4900
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 4900
-            },
-            parentId: "76139",
-            avgRatingString: "4.0",
-            totalRatingsString: "1K+",
-            sla: {
-                deliveryTime: 30,
-                lastMileTravel: 4.6,
-                serviceability: "SERVICEABLE",
-                slaString: "30 mins",
-                lastMileTravelString: "4.6 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 01:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹249",
-                discountTag: "FLAT DEAL"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/eatfit-devarabisanahalli-bellandur-bangalore-580936",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "20222",
-            name: "Oven Story Pizza",
-            cloudinaryImageId: "ab979bffbd658e74de650a15ca0092a3",
-            locality: "Lakshminarayana Pura",
-            areaName: "Chinnapanna Halli",
-            costForTwo: "₹400 for two",
-            cuisines: [
-                "Pizzas",
-                "Pastas",
-                "Italian",
-                "Desserts",
-                "Beverages"
-            ],
-            avgRating: 3.8,
-            feeDetails: {
-                restaurantId: "20222",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 3300
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 3300
-            },
-            parentId: "3534",
-            avgRatingString: "3.8",
-            totalRatingsString: "5K+",
-            sla: {
-                deliveryTime: 32,
-                lastMileTravel: 1.9,
-                serviceability: "SERVICEABLE",
-                slaString: "25-40 mins",
-                lastMileTravelString: "1.9 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 03:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹1099",
-                discountTag: "FLAT DEAL"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/oven-story-pizza-lakshminarayana-pura-chinnapanna-halli-bangalore-20222",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "424981",
-            name: "Biryani Blues",
-            cloudinaryImageId: "yjecdmrhpqq6l8n8cgvf",
-            locality: "Nallurahalli",
-            areaName: "Whitefield",
-            costForTwo: "₹400 for two",
-            cuisines: [
-                "Biryani",
-                "Hyderabadi",
-                "Lucknowi",
-                "Kebabs"
-            ],
-            avgRating: 3.9,
-            feeDetails: {
-                restaurantId: "424981",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 4900
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 4900
-            },
-            parentId: "13813",
-            avgRatingString: "3.9",
-            totalRatingsString: "1K+",
-            sla: {
-                deliveryTime: 24,
-                lastMileTravel: 4.4,
-                serviceability: "SERVICEABLE",
-                slaString: "24 mins",
-                lastMileTravelString: "4.4 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 03:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹199",
-                discountTag: "FLAT DEAL"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/biryani-blues-nallurahalli-whitefield-bangalore-424981",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "360",
-            name: "Beijing Bites",
-            cloudinaryImageId: "bmvqzldmdygamgqhxypm",
-            locality: "Whitefield",
-            areaName: "Whitefield",
-            costForTwo: "₹450 for two",
-            cuisines: [
-                "Chinese",
-                "Thai"
-            ],
-            avgRating: 4,
-            feeDetails: {
-                restaurantId: "360",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 7600
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 7600
-            },
-            parentId: "103",
-            avgRatingString: "4.0",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 28,
-                lastMileTravel: 6.4,
-                serviceability: "SERVICEABLE",
-                slaString: "28 mins",
-                lastMileTravelString: "6.4 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-28 23:30:00",
-                opened: true
-            },
-            badges: {
-                textExtendedBadges: [
-                    {
-                        iconId: "guiltfree/GF_Logo_android_3x",
-                        shortDescription: "options available",
-                        fontColor: "#7E808C"
-                    }
-                ]
-            },
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {
-                        badgeObject: [
-                            {
-                                attributes: {
-                                    description: "",
-                                    fontColor: "#7E808C",
-                                    iconId: "guiltfree/GF_Logo_android_3x",
-                                    shortDescription: "options available"
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "50% OFF",
-                subHeader: "UPTO ₹100"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/beijing-bites-whitefield-bangalore-360",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "63179",
-            name: "CakeZone",
-            cloudinaryImageId: "dc7abc110dbafe0a9bad837a292842dc",
-            locality: "Devarabisanahalli",
-            areaName: "Devarabisanahalli",
-            costForTwo: "₹200 for two",
-            cuisines: [
-                "Bakery",
-                "Desserts",
-                "Sweets",
-                "Ice Cream"
-            ],
-            avgRating: 4.1,
-            feeDetails: {
-                restaurantId: "63179",
-                fees: [
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 4900
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 4900
-            },
-            parentId: "7003",
-            avgRatingString: "4.1",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 28,
-                lastMileTravel: 4.6,
-                serviceability: "SERVICEABLE",
-                slaString: "28 mins",
-                lastMileTravelString: "4.6 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 02:00:00",
-                opened: true
-            },
-            badges: {
-                textExtendedBadges: [
-                    {
-                        iconId: "guiltfree/GF_Logo_android_3x",
-                        shortDescription: "options available",
-                        fontColor: "#7E808C"
-                    }
-                ]
-            },
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {
-                        badgeObject: [
-                            {
-                                attributes: {
-                                    description: "",
-                                    fontColor: "#7E808C",
-                                    iconId: "guiltfree/GF_Logo_android_3x",
-                                    shortDescription: "options available"
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹249",
-                discountTag: "FLAT DEAL"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/cakezone-devarabisanahalli-bangalore-63179",
-            type: "WEBLINK"
-        }
-    },
-    {
-        info: {
-            id: "10896",
-            name: "Taco Bell",
-            cloudinaryImageId: "e7f40335a66b230f5eda766022dfecbd",
-            locality: "Brookfiled Mall",
-            areaName: "Brookefield",
-            costForTwo: "₹300 for two",
-            cuisines: [
-                "Mexican"
-            ],
-            avgRating: 4,
-            feeDetails: {
-                restaurantId: "10896",
-                fees: [
-                    {
-                        name: "BASE_DISTANCE",
-                        fee: 4100
-                    },
-                    {
-                        name: "BASE_TIME"
-                    },
-                    {
-                        name: "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                totalFee: 4100
-            },
-            parentId: "1557",
-            avgRatingString: "4.0",
-            totalRatingsString: "10K+",
-            sla: {
-                deliveryTime: 24,
-                lastMileTravel: 3,
-                serviceability: "SERVICEABLE",
-                slaString: "24 mins",
-                lastMileTravelString: "3.0 km",
-                iconType: "ICON_TYPE_EMPTY"
-            },
-            availability: {
-                nextCloseTime: "2023-07-29 01:00:00",
-                opened: true
-            },
-            badges: {},
-            isOpen: true,
-            type: "F",
-            badgesV2: {
-                entityBadges: {
-                    imageBased: {},
-                    textBased: {},
-                    textExtendedBadges: {}
-                }
-            },
-            aggregatedDiscountInfoV3: {
-                header: "40% OFF",
-                subHeader: "UPTO ₹80"
-            },
-            orderabilityCommunication: {
-                title: {},
-                subTitle: {},
-                message: {},
-                customIcon: {}
-            },
-            differentiatedUi: {
-                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                differentiatedUiMediaDetails: {
-                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                    lottie: {},
-                    video: {}
-                }
-            },
-            reviewsSummary: {},
-            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            restaurantOfferPresentationInfo: {}
-        },
-        analytics: {},
-        cta: {
-            link: "https://www.swiggy.com/restaurants/taco-bell-brookfiled-mall-brookefield-bangalore-10896",
-            type: "WEBLINK"
-        }
-    }
-];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","./Login":"hsmcH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.14.2
  *
@@ -35440,7 +33192,524 @@ function getDoneFetcher(data) {
     return fetcher;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cgAOG":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"hsmcH":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5afe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5afe.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+const Login = ()=>{
+    _s();
+    const [log, setLog] = (0, _react.useState)("Logout");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+            onClick: ()=>{
+                log == "Login" ? setLog("Logout") : setLog("Login");
+            },
+            className: "bg-gray-400 hover:bg-gray-450 text-white font-semibold py-2 px-4 rounded",
+            children: log
+        }, void 0, false, {
+            fileName: "src/components/Login.js",
+            lineNumber: 8,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Login.js",
+        lineNumber: 7,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Login, "/J9lMQh/LqgFdjEshhdBm1uMDv8=");
+_c = Login;
+exports.default = Login;
+var _c;
+$RefreshReg$(_c, "Login");
+
+  $parcel$ReactRefreshHelpers$5afe.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("7422ead32dcc1e6b");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30);
+// Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports;
+                // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
+                // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+}
+// When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        var typeID = id + " %exports% " + key;
+        Refresh.register(exportValue, typeID);
+    }
+}
+
+},{"7422ead32dcc1e6b":"786KC"}],"9R1Eu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5b98.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const About = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "About us"
+            }, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "We are a big team to helping to everyone to grow."
+            }, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/About.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = About;
+exports.default = About;
+var _c;
+$RefreshReg$(_c, "About");
+
+  $parcel$ReactRefreshHelpers$5b98.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7w5cb":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d74a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d74a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _constant = require("../utils/constant");
+var _loader = require("./Loader");
+var _loaderDefault = parcelHelpers.interopDefault(_loader);
+var _s = $RefreshSig$();
+const RestaurantCart = ()=>{
+    _s();
+    let [restaurant, setRestaurant] = (0, _react.useState)([]);
+    let [filterRestaurant, setFilterRestaurant] = (0, _react.useState)([]);
+    const [text, setText] = (0, _react.useState)("");
+    //useEffect
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    async function fetchData() {
+        const res = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.956924&lng=77.701127&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json = await res.json();
+        setRestaurant(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
+        setFilterRestaurant(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
+    }
+    function topRatedRestaurant() {
+        const filteredRes1 = restaurant.filter((ele)=>{
+            return ele.info.avgRating > 4;
+        });
+        setRestaurant(filteredRes1);
+    }
+    function filterAll() {
+        fetchData();
+    }
+    function mediumRestaurant() {
+        filteredRes = restaurant.filter((ele)=>{
+            return ele.info.avgRating <= 3.9;
+        });
+        setRestaurant(filteredRes);
+    }
+    console.log(text);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "ml-36 mb-3 flex",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: filterAll,
+                        className: "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded",
+                        children: "All"
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantCart.js",
+                        lineNumber: 56,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: topRatedRestaurant,
+                        className: "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mx-5",
+                        children: "Top Rated Restaurant"
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantCart.js",
+                        lineNumber: 62,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: mediumRestaurant,
+                        className: "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded",
+                        children: "Medium Rated Restaurant"
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantCart.js",
+                        lineNumber: 68,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: text,
+                                placeholder: "Search Your Food",
+                                className: "w-[500px] px-4 py-2 ml-5 rounded-md bg-gray-100 focus:outline-none",
+                                onChange: (e)=>setText(e.target.value)
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantCart.js",
+                                lineNumber: 77,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "bg-gray-200 hover:bg-gray-600 text-white font-bold py-1 px-4 rounded ml-5 text-black",
+                                onClick: ()=>{
+                                    filterRestaurant = restaurant.filter((ele)=>{
+                                        ele.info.name.toLowerCase().includes(text.toLowerCase());
+                                    });
+                                    setFilterRestaurant(filterRestaurant);
+                                },
+                                children: "Search"
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantCart.js",
+                                lineNumber: 83,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurantCart.js",
+                        lineNumber: 76,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurantCart.js",
+                lineNumber: 55,
+                columnNumber: 7
+            }, undefined),
+            filterRestaurant.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex w-full justify-center",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "w-[1600px] grid grid-cols-5 gap-5 justify-center items-center",
+                    children: filterRestaurant.map((ele)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "border-2 h-96 w-72 ",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "h-72 w-full rounded-lg",
+                                    src: `${(0, _constant.CDN_IMG)}${ele?.info?.cloudinaryImageId}`,
+                                    alt: ele.info.name
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantCart.js",
+                                    lineNumber: 102,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    className: "text-lg font-bold",
+                                    children: ele.info.name.split(",", 3)
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantCart.js",
+                                    lineNumber: 107,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center",
+                                    children: [
+                                        " ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                            children: [
+                                                ele.info.avgRating,
+                                                " ",
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    children: "*"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/RestaurantCart.js",
+                                                    lineNumber: 114,
+                                                    columnNumber: 42
+                                                }, undefined),
+                                                " "
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/RestaurantCart.js",
+                                            lineNumber: 113,
+                                            columnNumber: 19
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/RestaurantCart.js",
+                                    lineNumber: 110,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    children: ele.info.cuisines.join(" ")
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantCart.js",
+                                    lineNumber: 118,
+                                    columnNumber: 17
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/RestaurantCart.js",
+                            lineNumber: 101,
+                            columnNumber: 15
+                        }, undefined))
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantCart.js",
+                    lineNumber: 99,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCart.js",
+                lineNumber: 98,
+                columnNumber: 9
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loaderDefault.default), {}, void 0, false, {
+                fileName: "src/components/RestaurantCart.js",
+                lineNumber: 124,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(RestaurantCart, "05L55f7VVpUhE2S594G2SQIlUeA=");
+_c = RestaurantCart;
+exports.default = RestaurantCart;
+var _c;
+$RefreshReg$(_c, "RestaurantCart");
+
+  $parcel$ReactRefreshHelpers$d74a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/constant":"6mqGZ","./Loader":"1ptgS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6mqGZ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CDN_IMG", ()=>CDN_IMG);
+const CDN_IMG = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1ptgS":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9122 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9122.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Loader = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex w-full justify-center",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "w-[1600px] grid grid-cols-5 gap-5 justify-center items-center",
+            children: Array.from({
+                length: 10
+            }).map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "h-96 w-72 bg-gray-300 rounded-md mx-2 "
+                }, void 0, false, {
+                    fileName: "src/components/Loader.js",
+                    lineNumber: 6,
+                    columnNumber: 11
+                }, undefined))
+        }, void 0, false, {
+            fileName: "src/components/Loader.js",
+            lineNumber: 4,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Loader.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Loader;
+exports.default = Loader;
+var _c;
+$RefreshReg$(_c, "Loader");
+
+  $parcel$ReactRefreshHelpers$9122.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cgAOG":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ee46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35545,6 +33814,1857 @@ $RefreshReg$(_c, "Error");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}]},["hcwwj","1xC6H","2kQhy"], "2kQhy", "parcelRequire5906")
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iOpE9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "restaurants", ()=>restaurants);
+const restaurants = [
+    {
+        info: {
+            id: "47603",
+            name: "Truffles",
+            cloudinaryImageId: "cd832b6167eb9f88aeb1ccdebf38d942",
+            locality: "Green Glen Layout",
+            areaName: "Bellandur",
+            costForTwo: "₹450 for two",
+            cuisines: [
+                "American",
+                "Beverages",
+                "Continental",
+                "Desserts",
+                "Italian"
+            ],
+            avgRating: 4.4,
+            feeDetails: {
+                restaurantId: "47603",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 7600
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 7600
+            },
+            parentId: "218065",
+            avgRatingString: "4.4",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 42,
+                lastMileTravel: 6.3,
+                serviceability: "SERVICEABLE",
+                slaString: "42 mins",
+                lastMileTravelString: "6.3 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 00:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            aggregatedDiscountInfoV2: {},
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/truffles-green-glen-layout-bellandur-bangalore-47603",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "47439",
+            name: "Leon's - Burgers & Wings (Leon Grill)",
+            cloudinaryImageId: "uxtqnke0nupbu1i1fmvf",
+            locality: "Outer Ring Road",
+            areaName: "Marathahalli",
+            costForTwo: "₹400 for two",
+            cuisines: [
+                "American",
+                "Snacks",
+                "Turkish",
+                "Portuguese",
+                "Continental"
+            ],
+            avgRating: 4.1,
+            feeDetails: {
+                restaurantId: "47439",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3300
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3300
+            },
+            parentId: "371281",
+            avgRatingString: "4.1",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 24,
+                lastMileTravel: 1.7,
+                serviceability: "SERVICEABLE",
+                slaString: "24 mins",
+                lastMileTravelString: "1.7 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 04:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹249",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/leons-burgers-and-wings-leon-grill-outer-ring-road-marathahalli-bangalore-47439",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "18976",
+            name: "Nandhana Palace",
+            cloudinaryImageId: "195876a3181ef63f76e45e3a7b49b585",
+            locality: "Munnekollal",
+            areaName: "Marathahalli",
+            costForTwo: "₹500 for two",
+            cuisines: [
+                "Biryani",
+                "Andhra",
+                "South Indian",
+                "North Indian"
+            ],
+            avgRating: 4.1,
+            feeDetails: {
+                restaurantId: "18976",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4100
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4100
+            },
+            parentId: "2120",
+            avgRatingString: "4.1",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 30,
+                lastMileTravel: 3,
+                serviceability: "SERVICEABLE",
+                slaString: "30 mins",
+                lastMileTravelString: "3.0 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 02:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹249",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/nandhana-palace-munnekollal-marathahalli-bangalore-18976",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "79472",
+            name: "Domino's Pizza",
+            cloudinaryImageId: "nkxgwtukusj6dnfbn8lr",
+            locality: "Munnekolalu",
+            areaName: "Marathahalli",
+            costForTwo: "₹400 for two",
+            cuisines: [
+                "Pizzas",
+                "Italian",
+                "Pastas",
+                "Desserts"
+            ],
+            avgRating: 4.3,
+            feeDetails: {
+                restaurantId: "79472",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3300
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3300
+            },
+            parentId: "2456",
+            avgRatingString: "4.3",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 35,
+                serviceability: "SERVICEABLE",
+                slaString: "35 mins",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 02:59:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "₹150 OFF",
+                subHeader: "ABOVE ₹699",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/dominos-pizza-munnekolalu-marathahalli-bangalore-79472",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "390620",
+            name: "The Belgian Waffle Co.",
+            cloudinaryImageId: "q8adcck8ioox7yww3ibe",
+            locality: "Tulasi Theater Road",
+            areaName: "Marathahalli",
+            costForTwo: "₹200 for two",
+            cuisines: [
+                "Waffle",
+                "Desserts",
+                "Ice Cream"
+            ],
+            avgRating: 4.3,
+            veg: true,
+            feeDetails: {
+                restaurantId: "390620",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3300
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3300
+            },
+            parentId: "2233",
+            avgRatingString: "4.3",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 31,
+                lastMileTravel: 0.5,
+                serviceability: "SERVICEABLE",
+                slaString: "31 mins",
+                lastMileTravelString: "0.5 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 02:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "20% OFF",
+                subHeader: "UPTO ₹50"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/the-belgian-waffle-co-tulasi-theater-road-marathahalli-bangalore-390620",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "23688",
+            name: "McDonald's",
+            cloudinaryImageId: "ee5f8e06b300efc07c9fe3f4df40dfc4",
+            locality: "Marathahalli",
+            areaName: "Brookefield",
+            costForTwo: "₹400 for two",
+            cuisines: [
+                "Burgers",
+                "Beverages",
+                "Cafe",
+                "Desserts"
+            ],
+            avgRating: 4.1,
+            feeDetails: {
+                restaurantId: "23688",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4100
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4100
+            },
+            parentId: "630",
+            avgRatingString: "4.1",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 26,
+                lastMileTravel: 3,
+                serviceability: "SERVICEABLE",
+                slaString: "26 mins",
+                lastMileTravelString: "3.0 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 03:45:00",
+                opened: true
+            },
+            badges: {
+                textExtendedBadges: [
+                    {
+                        iconId: "guiltfree/GF_Logo_android_3x",
+                        shortDescription: "options available",
+                        fontColor: "#7E808C"
+                    }
+                ]
+            },
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {
+                        badgeObject: [
+                            {
+                                attributes: {
+                                    description: "",
+                                    fontColor: "#7E808C",
+                                    iconId: "guiltfree/GF_Logo_android_3x",
+                                    shortDescription: "options available"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "10% OFF",
+                subHeader: "ABOVE ₹999",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/mcdonalds-marathahalli-brookefield-bangalore-23688",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "10866",
+            name: "Pizza Hut",
+            cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
+            locality: "Munnekolalu Village",
+            areaName: "Marathahalli",
+            costForTwo: "₹350 for two",
+            cuisines: [
+                "Pizzas"
+            ],
+            avgRating: 3.7,
+            feeDetails: {
+                restaurantId: "10866",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3300
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3300
+            },
+            parentId: "721",
+            avgRatingString: "3.7",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 22,
+                lastMileTravel: 1.9,
+                serviceability: "SERVICEABLE",
+                slaString: "22 mins",
+                lastMileTravelString: "1.9 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 04:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "50% OFF",
+                subHeader: "UPTO ₹100"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/pizza-hut-munnekolalu-village-marathahalli-bangalore-10866",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "43910",
+            name: "KFC",
+            cloudinaryImageId: "56c9ab92bd79745fd152a30fa2525426",
+            locality: "Kbr Mall",
+            areaName: "Marathahalli",
+            costForTwo: "₹400 for two",
+            cuisines: [
+                "Burgers",
+                "Biryani",
+                "American",
+                "Snacks",
+                "Fast Food"
+            ],
+            avgRating: 3.9,
+            feeDetails: {
+                restaurantId: "43910",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4100
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4100
+            },
+            parentId: "547",
+            avgRatingString: "3.9",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 25,
+                lastMileTravel: 3.5,
+                serviceability: "SERVICEABLE",
+                slaString: "25 mins",
+                lastMileTravelString: "3.5 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 01:59:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "40% OFF",
+                subHeader: "UPTO ₹80"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/kfc-kbr-mall-marathahalli-bangalore-43910",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "21668",
+            name: "Subway",
+            cloudinaryImageId: "1ace5fa65eff3e1223feb696c956b38b",
+            locality: "Kundanahalli",
+            areaName: "Marathahalli",
+            costForTwo: "₹350 for two",
+            cuisines: [
+                "Salads",
+                "Snacks",
+                "Desserts",
+                "Beverages"
+            ],
+            avgRating: 4.3,
+            feeDetails: {
+                restaurantId: "21668",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3300
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3300
+            },
+            parentId: "2",
+            avgRatingString: "4.3",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 19,
+                lastMileTravel: 2,
+                serviceability: "SERVICEABLE",
+                slaString: "19 mins",
+                lastMileTravelString: "2.0 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-28 23:55:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "40% OFF",
+                subHeader: "UPTO ₹80"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/subway-kundanahalli-marathahalli-bangalore-21668",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "1187",
+            name: "Baskin Robbins - Ice Cream Desserts",
+            cloudinaryImageId: "85ccae4e3576f9330af102c46ca85395",
+            locality: "Anand Nagar",
+            areaName: "Marathahalli",
+            costForTwo: "₹250 for two",
+            cuisines: [
+                "Desserts",
+                "Ice Cream"
+            ],
+            avgRating: 4.4,
+            veg: true,
+            feeDetails: {
+                restaurantId: "1187",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3300
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3300
+            },
+            parentId: "5588",
+            avgRatingString: "4.4",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 19,
+                lastMileTravel: 2.5,
+                serviceability: "SERVICEABLE",
+                slaString: "19 mins",
+                lastMileTravelString: "2.5 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 05:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "D",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "30% OFF",
+                subHeader: "UPTO ₹75"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/baskin-robbins-ice-cream-desserts-anand-nagar-marathahalli-bangalore-1187",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "457821",
+            name: "Istah - The Mediterranean Way",
+            cloudinaryImageId: "67d4a416bf932f850b0a15ad33aae762",
+            locality: "Munnekolala",
+            areaName: "Marathahalli",
+            costForTwo: "₹250 for two",
+            cuisines: [
+                "Mediterranean",
+                "Snacks",
+                "Biryani",
+                "Grill",
+                "Kebabs",
+                "Arabian",
+                "Lebanese",
+                "Beverages",
+                "Desserts",
+                "Italian",
+                "Turkish"
+            ],
+            avgRating: 4.3,
+            feeDetails: {
+                restaurantId: "457821",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3300
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3300
+            },
+            parentId: "3518",
+            avgRatingString: "4.3",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 18,
+                lastMileTravel: 1.3,
+                serviceability: "SERVICEABLE",
+                slaString: "18 mins",
+                lastMileTravelString: "1.3 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 02:00:00",
+                opened: true
+            },
+            badges: {
+                textExtendedBadges: [
+                    {
+                        iconId: "guiltfree/GF_Logo_android_3x",
+                        shortDescription: "options available",
+                        fontColor: "#7E808C"
+                    }
+                ]
+            },
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {
+                        badgeObject: [
+                            {
+                                attributes: {
+                                    description: "",
+                                    fontColor: "#7E808C",
+                                    iconId: "guiltfree/GF_Logo_android_3x",
+                                    shortDescription: "options available"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "60% OFF",
+                subHeader: "UPTO ₹100"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/istah-the-mediterranean-way-munnekolala-marathahalli-bangalore-457821",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "249717",
+            name: "The Good Bowl",
+            cloudinaryImageId: "j8wxjf8lrtit0s94bxyo",
+            locality: "Tulasi theater",
+            areaName: "Marathahalli",
+            costForTwo: "₹400 for two",
+            cuisines: [
+                "Biryani",
+                "North Indian",
+                "Pastas",
+                "Punjabi",
+                "Desserts",
+                "Beverages"
+            ],
+            avgRating: 3.9,
+            feeDetails: {
+                restaurantId: "249717",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3300
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3300
+            },
+            parentId: "7918",
+            avgRatingString: "3.9",
+            totalRatingsString: "100+",
+            sla: {
+                deliveryTime: 21,
+                lastMileTravel: 0.5,
+                serviceability: "SERVICEABLE",
+                slaString: "21 mins",
+                lastMileTravelString: "0.5 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 03:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "60% OFF",
+                subHeader: "UPTO ₹120"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/the-good-bowl-tulasi-theater-marathahalli-bangalore-249717",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "32474",
+            name: "Thalassery Restaurant",
+            cloudinaryImageId: "qdvgwbz1b1pcttf1tifj",
+            locality: "M S Reddy Layout",
+            areaName: "Marathahalli",
+            costForTwo: "₹300 for two",
+            cuisines: [
+                "South Indian",
+                "Biryani",
+                "Kerala",
+                "North Indian",
+                "Chinese"
+            ],
+            avgRating: 3.9,
+            feeDetails: {
+                restaurantId: "32474",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3300
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3300
+            },
+            parentId: "14391",
+            avgRatingString: "3.9",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 18,
+                lastMileTravel: 0.2,
+                serviceability: "SERVICEABLE",
+                slaString: "18 mins",
+                lastMileTravelString: "0.2 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-28 23:25:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "15% OFF",
+                subHeader: "ABOVE ₹900",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/thalassery-restaurant-m-s-reddy-layout-marathahalli-bangalore-32474",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "271483",
+            name: "Burger King",
+            cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+            locality: "VR Mall",
+            areaName: "Krishnarajapura",
+            costForTwo: "₹350 for two",
+            cuisines: [
+                "Burgers",
+                "American"
+            ],
+            avgRating: 4,
+            feeDetails: {
+                restaurantId: "271483",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 7600
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 7600
+            },
+            parentId: "166",
+            avgRatingString: "4.0",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 33,
+                lastMileTravel: 6.4,
+                serviceability: "SERVICEABLE",
+                slaString: "33 mins",
+                lastMileTravelString: "6.4 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 03:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "EVERY ITEM",
+                subHeader: "@ ₹129"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/burger-king-vr-mall-krishnarajapura-bangalore-271483",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "580936",
+            name: "EatFit",
+            cloudinaryImageId: "94d3bc5e6392fbaf50686cf8cfab10ef",
+            locality: "Devarabisanahalli",
+            areaName: "Bellandur",
+            costForTwo: "₹270 for two",
+            cuisines: [
+                "Chinese",
+                "Healthy Food",
+                "Tandoor",
+                "Pizzas",
+                "North Indian",
+                "Thalis",
+                "Biryani"
+            ],
+            avgRating: 4,
+            feeDetails: {
+                restaurantId: "580936",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4900
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4900
+            },
+            parentId: "76139",
+            avgRatingString: "4.0",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 30,
+                lastMileTravel: 4.6,
+                serviceability: "SERVICEABLE",
+                slaString: "30 mins",
+                lastMileTravelString: "4.6 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 01:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹249",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/eatfit-devarabisanahalli-bellandur-bangalore-580936",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "20222",
+            name: "Oven Story Pizza",
+            cloudinaryImageId: "ab979bffbd658e74de650a15ca0092a3",
+            locality: "Lakshminarayana Pura",
+            areaName: "Chinnapanna Halli",
+            costForTwo: "₹400 for two",
+            cuisines: [
+                "Pizzas",
+                "Pastas",
+                "Italian",
+                "Desserts",
+                "Beverages"
+            ],
+            avgRating: 3.8,
+            feeDetails: {
+                restaurantId: "20222",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 3300
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 3300
+            },
+            parentId: "3534",
+            avgRatingString: "3.8",
+            totalRatingsString: "5K+",
+            sla: {
+                deliveryTime: 32,
+                lastMileTravel: 1.9,
+                serviceability: "SERVICEABLE",
+                slaString: "25-40 mins",
+                lastMileTravelString: "1.9 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 03:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹1099",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/oven-story-pizza-lakshminarayana-pura-chinnapanna-halli-bangalore-20222",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "424981",
+            name: "Biryani Blues",
+            cloudinaryImageId: "yjecdmrhpqq6l8n8cgvf",
+            locality: "Nallurahalli",
+            areaName: "Whitefield",
+            costForTwo: "₹400 for two",
+            cuisines: [
+                "Biryani",
+                "Hyderabadi",
+                "Lucknowi",
+                "Kebabs"
+            ],
+            avgRating: 3.9,
+            feeDetails: {
+                restaurantId: "424981",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4900
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4900
+            },
+            parentId: "13813",
+            avgRatingString: "3.9",
+            totalRatingsString: "1K+",
+            sla: {
+                deliveryTime: 24,
+                lastMileTravel: 4.4,
+                serviceability: "SERVICEABLE",
+                slaString: "24 mins",
+                lastMileTravelString: "4.4 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 03:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹199",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/biryani-blues-nallurahalli-whitefield-bangalore-424981",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "360",
+            name: "Beijing Bites",
+            cloudinaryImageId: "bmvqzldmdygamgqhxypm",
+            locality: "Whitefield",
+            areaName: "Whitefield",
+            costForTwo: "₹450 for two",
+            cuisines: [
+                "Chinese",
+                "Thai"
+            ],
+            avgRating: 4,
+            feeDetails: {
+                restaurantId: "360",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 7600
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 7600
+            },
+            parentId: "103",
+            avgRatingString: "4.0",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 28,
+                lastMileTravel: 6.4,
+                serviceability: "SERVICEABLE",
+                slaString: "28 mins",
+                lastMileTravelString: "6.4 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-28 23:30:00",
+                opened: true
+            },
+            badges: {
+                textExtendedBadges: [
+                    {
+                        iconId: "guiltfree/GF_Logo_android_3x",
+                        shortDescription: "options available",
+                        fontColor: "#7E808C"
+                    }
+                ]
+            },
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {
+                        badgeObject: [
+                            {
+                                attributes: {
+                                    description: "",
+                                    fontColor: "#7E808C",
+                                    iconId: "guiltfree/GF_Logo_android_3x",
+                                    shortDescription: "options available"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "50% OFF",
+                subHeader: "UPTO ₹100"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/beijing-bites-whitefield-bangalore-360",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "63179",
+            name: "CakeZone",
+            cloudinaryImageId: "dc7abc110dbafe0a9bad837a292842dc",
+            locality: "Devarabisanahalli",
+            areaName: "Devarabisanahalli",
+            costForTwo: "₹200 for two",
+            cuisines: [
+                "Bakery",
+                "Desserts",
+                "Sweets",
+                "Ice Cream"
+            ],
+            avgRating: 4.1,
+            feeDetails: {
+                restaurantId: "63179",
+                fees: [
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4900
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4900
+            },
+            parentId: "7003",
+            avgRatingString: "4.1",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 28,
+                lastMileTravel: 4.6,
+                serviceability: "SERVICEABLE",
+                slaString: "28 mins",
+                lastMileTravelString: "4.6 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 02:00:00",
+                opened: true
+            },
+            badges: {
+                textExtendedBadges: [
+                    {
+                        iconId: "guiltfree/GF_Logo_android_3x",
+                        shortDescription: "options available",
+                        fontColor: "#7E808C"
+                    }
+                ]
+            },
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {
+                        badgeObject: [
+                            {
+                                attributes: {
+                                    description: "",
+                                    fontColor: "#7E808C",
+                                    iconId: "guiltfree/GF_Logo_android_3x",
+                                    shortDescription: "options available"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹249",
+                discountTag: "FLAT DEAL"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/cakezone-devarabisanahalli-bangalore-63179",
+            type: "WEBLINK"
+        }
+    },
+    {
+        info: {
+            id: "10896",
+            name: "Taco Bell",
+            cloudinaryImageId: "e7f40335a66b230f5eda766022dfecbd",
+            locality: "Brookfiled Mall",
+            areaName: "Brookefield",
+            costForTwo: "₹300 for two",
+            cuisines: [
+                "Mexican"
+            ],
+            avgRating: 4,
+            feeDetails: {
+                restaurantId: "10896",
+                fees: [
+                    {
+                        name: "BASE_DISTANCE",
+                        fee: 4100
+                    },
+                    {
+                        name: "BASE_TIME"
+                    },
+                    {
+                        name: "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                totalFee: 4100
+            },
+            parentId: "1557",
+            avgRatingString: "4.0",
+            totalRatingsString: "10K+",
+            sla: {
+                deliveryTime: 24,
+                lastMileTravel: 3,
+                serviceability: "SERVICEABLE",
+                slaString: "24 mins",
+                lastMileTravelString: "3.0 km",
+                iconType: "ICON_TYPE_EMPTY"
+            },
+            availability: {
+                nextCloseTime: "2023-07-29 01:00:00",
+                opened: true
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+                entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {}
+                }
+            },
+            aggregatedDiscountInfoV3: {
+                header: "40% OFF",
+                subHeader: "UPTO ₹80"
+            },
+            orderabilityCommunication: {
+                title: {},
+                subTitle: {},
+                message: {},
+                customIcon: {}
+            },
+            differentiatedUi: {
+                displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {}
+                }
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {}
+        },
+        analytics: {},
+        cta: {
+            link: "https://www.swiggy.com/restaurants/taco-bell-brookfiled-mall-brookefield-bangalore-10896",
+            type: "WEBLINK"
+        }
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gUQ0D":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f834 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f834.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+const RestaurantMenuPage = ()=>{
+    _s();
+    (0, _react.useEffect)(()=>{
+        getRestaurant();
+    }, []);
+    async function getRestaurant() {
+        const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.956924&lng=77.701127&restaurantId=667&catalog_qa=undefined&submitAction=ENTER");
+        const res = await data.json();
+        console.log(res);
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Name of the Restaurant"
+            }, void 0, false, {
+                fileName: "src/components/RestaurantMenuPage.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: "Home"
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenuPage.js",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: "About us"
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenuPage.js",
+                        lineNumber: 22,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: "Contact Us"
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenuPage.js",
+                        lineNumber: 23,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurantMenuPage.js",
+                lineNumber: 20,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestaurantMenuPage.js",
+        lineNumber: 18,
+        columnNumber: 5
+    }, undefined);
+};
+_s(RestaurantMenuPage, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_c = RestaurantMenuPage;
+exports.default = RestaurantMenuPage;
+var _c;
+$RefreshReg$(_c, "RestaurantMenuPage");
+
+  $parcel$ReactRefreshHelpers$f834.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}]},["hcwwj","1xC6H","2kQhy"], "2kQhy", "parcelRequire5906")
 
 //# sourceMappingURL=index.7271efb6.js.map

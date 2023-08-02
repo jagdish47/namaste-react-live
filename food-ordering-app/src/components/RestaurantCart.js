@@ -15,7 +15,7 @@ const RestaurantCart = () => {
 
   async function fetchData() {
     const res = await fetch(
-      "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=12.956924&lng=77.701127&carousel=true&third_party_vendor=1"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.956924&lng=77.701127&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await res.json();
 

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Login from "./Login";
 
 function Header() {
@@ -19,9 +20,9 @@ function Header() {
         />
       </div>
       <ul style={{ display: "flex", listStyle: "none", gap: "30px" }}>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
+        <li> <Link to="/"> Home </Link></li>
+        <li><Link to="/about">About Us</Link></li>
+        <li><Link to="/contact">Contact Us</Link></li>
         <li>Cart</li>
         <Login />
       </ul>
